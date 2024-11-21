@@ -588,7 +588,7 @@ video {
   }
 }
 
-.news-post {
+.news-post-tl {
   margin: 0.5rem;
   cursor: pointer;
   border-radius: 0.375rem;
@@ -600,7 +600,7 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.news-post:hover {
+.news-post-tl:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
   --tw-text-opacity: 1;
