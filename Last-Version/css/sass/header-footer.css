@@ -141,6 +141,7 @@
     text-align: center;
   }
   #lateral .link a {
+    color: black;
     text-decoration: none;
     font-weight: bold;
   }
