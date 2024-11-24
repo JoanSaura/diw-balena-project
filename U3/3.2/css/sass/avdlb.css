@@ -11,7 +11,7 @@
 
 .post {
   display: flex;
-  background-color: #fff8dc;
+  background-color: #ccc;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -20,7 +20,7 @@
 
 .post-image {
   width: 340px;
-  height: 200px;
+  height: 500px;
   margin-right: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -70,8 +70,4 @@ button {
 }
 button:hover {
   background-color: #2e2e4e;
-}
-
-#accesibility-menu {
-  background-color: #f0f0f0;
 }/*# sourceMappingURL=avdlb.css.map */

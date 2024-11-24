@@ -1,6 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -8,10 +25,8 @@
 
 @media (max-width: 650px) {
   body {
+    background-color: #ffffff;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
   }
   .logo-img-desk,
   #header > h1,
@@ -38,7 +53,6 @@
     cursor: pointer;
   }
   #center-container {
-    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,11 +75,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: large;
+    font-size: 3rem;
   }
   textarea,
-  #footer {
-    background-color: rgb(0, 21, 37);
+  .news-post,
+  .post {
+    font-size: 3rem;
   }
 }
 @media (min-width: 651px) {
@@ -92,7 +107,7 @@
   #main-content {
     width: 70%;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin: auto;
     background-color: #ffffff;
   }
@@ -101,49 +116,41 @@
     height: 500px;
   }
   #lateral {
-    left: 0; 
+    left: 0;
     width: 200px;
     background-color: #f0f0f0;
     display: grid;
-    padding: 20px;
+    padding: 25px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-    border-radius: 0 25px 25px 0;
-    border: 2px solid black;
+    border-radius: 0 30px 30px 0;
+    border: 2px solid #000000;
     box-sizing: border-box;
     z-index: 1000;
-    transition: left 0.3s ease;
   }
-  
-  #lateral.hidden {
-    left: -200px;
-  }
-  
   .content-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: rgba(255, 255, 255, 0.9921568627);
+    background-color: #ffffff;
     margin-top: 20px;
     flex-wrap: wrap;
   }
   #lateral .link {
-    color: black;
-    background-color: #00a8e8 ;
     margin: 15px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 3.5rem;
     align-items: center;
     display: flex;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid #000000;
     text-align: center;
   }
   #lateral .link a {
-    color: black;
     text-decoration: none;
+    color: #000000;
     font-weight: bold;
   }
   #lateral .close {
@@ -158,11 +165,11 @@
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid #000000;
     cursor: pointer;
   }
   #lateral .close i {
-    font-size: font-size-large;
+    font-size: 20px;
   }
   #login {
     background-color: #ffffff;
@@ -172,11 +179,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 #header > h1 {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-family: "Gowun Batang", sans-serif;
   text-align: center;
   font-weight: bold;
@@ -192,16 +199,16 @@ h2 {
 }
 
 #user-cont {
+  border: 4px solid #ffffff;
+  border-radius: 30px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 55px;
-  background-color: #aaa6ca;
   width: 55px;
   cursor: pointer;
 }
-
 #user-cont > .fa-user {
   color: #ffffff;
   font-size: 50px;
@@ -222,7 +229,7 @@ a {
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin: 15px;
 }
 
@@ -238,7 +245,6 @@ p {
 }
 
 .assembly-pictures {
-  cursor: pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -283,7 +289,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  color: white;
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 10px;
@@ -292,10 +298,10 @@ p {
 
 .pic-author {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  font-size: 18px;
+  bottom: 5px;
+  left: 5px;
+  color: #ffffff;
+  font-size: 3.5rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 5px 10px;
@@ -303,13 +309,13 @@ p {
 }
 
 #footer {
-  color: aliceblue;
-  height: 55px;
+  position: relative;
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: auto;  
+  justify-content: space-between;
+  background: rgb(12, 12, 34);
 }
 
 #footer-links {
@@ -320,15 +326,15 @@ p {
 .author {
   color: aliceblue;
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #login {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 #login .login-label {
@@ -337,56 +343,18 @@ p {
 
 #login > input {
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #login > .sumbit-login {
   cursor: pointer;
-  border-radius: 15px;
-  border: 2px solid black;
+  border-radius: 10px;
+  border: 2px solid #000000;
   background-color: #ffffff;
 }
 
 #footer .footer-icon {
-  margin-right: 10px;
-}
-
-
-.font-large {
-  font-size: 1.1em;
-}
-
-.font-small {
-  font-size: 0.95em;
-}
-
-.line-spacing-large {
-  line-height: 1.8;
-}
-
-.line-spacing-default {
-  line-height: 1.5;
-}
-
-.word-spacing-large {
-  word-spacing: 0.2em;
-}
-
-.letter-spacing-large {
-  letter-spacing: 0.1em;
-}
-
-* {
-  pointer-events: auto;
-}
-
-a:hover,
-button:hover,
-.hoverable:hover {
-  color: inherit;
-  background: inherit;
-  text-decoration: none;
-  border-color: inherit;
+  margin-right: 5px;
 }
 
 @media (max-width: 650px) {
@@ -420,6 +388,11 @@ button:hover,
   background-position: 0 100%;
 }
 
+#user-cont:hover {
+  background: linear-gradient(90deg, rgb(12, 12, 34) 0%, rgb(9, 41, 67) 50%, rgb(0, 126, 167) 100%);
+  background-size: 100% 200%;
+  transition: background-position 1s ease;
+}
 
 #footer-links a:hover {
   text-decoration: underline;
@@ -436,7 +409,6 @@ button:hover,
 #login > .sumbit:hover {
   background: linear-gradient(90deg, rgb(12, 12, 34) 0%, rgb(9, 41, 67) 50%, rgb(0, 126, 167) 100%);
   background-size: 180% 180%;
-  color: white;
   animation: gradient-animation 2s ease infinite;
 }
 
@@ -514,47 +486,9 @@ button:hover {
   background-color: #f0f0f0;
 }
 
-.font-large {
-  font-size: 1.1rem;
-}
-
-.font-small {
-  font-size: 0.95rem;
-}
-
-.line-spacing-large {
-  line-height: 1.8;
-}
-
-.line-spacing-default {
-  line-height: 1.5;
-}
-
-.word-spacing-large {
-  word-spacing: 0.2em;
-}
-
-.letter-spacing-large {
-  letter-spacing: 0.1em;
-}
-
-* {
-  pointer-events: auto;
-}
-
-a:hover,
-button:hover,
-.hoverable:hover {
-  color: inherit;
-  background: inherit;
-  text-decoration: none;
-  border-color: inherit;
-}
-
 #accessibility-menu {
-  position: fixed;
   top: 50%;
-  right: -323px;
+  right: -320px;
   transform: translateY(-50%);
   background-color: #f9f9f9;
   font-size: 16px;
@@ -568,10 +502,12 @@ button:hover,
   flex-direction: column;
   gap: 12px;
   max-width: 280px;
+  display: none;
 }
 
 #accessibility-menu.visible {
-  right: 1px;
+  display: flex;
+  left: 1px;
 }
 
 #accessibility-menu h3 {
@@ -605,7 +541,6 @@ button:hover,
 }
 
 #toggle-accessibility {
-  position: fixed;
   bottom: 20px;
   left: 20px;
   background-color: #00796b;
@@ -619,8 +554,6 @@ button:hover,
   transition: background-color 0.3s, transform 0.3s;
 }
 
-
-
 #toggle-accessibility:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
@@ -633,6 +566,25 @@ button:hover,
     bottom: auto;
     transform: translateY(-50%);
     border-radius: 8px;
+  }
+  #accessibility-menu {
+    display: flex;
+    left: 1px;
+  }
+}
+@media (max-width: 649px) {
+  #toggle-accessibility {
+    display: block;
+    top: auto;
+    bottom: 20px;
+    left: auto;
+    right: 20px;
+  }
+  #accessibility-menu {
+    display: none;
+  }
+  #accessibility-menu.visible {
+    display: flex;
   }
 }
 .grayscale {
@@ -660,7 +612,7 @@ button:hover,
 }
 
 .font-small {
-  font-size: 0.95em !important;
+  font-size: 0.9em !important;
 }
 
 .line-spacing-large {
@@ -681,33 +633,4 @@ button:hover,
 
 .low-contrast {
   filter: contrast(70%) brightness(130%);
-}
-.font-large {
-  font-size: 1.1em;
-}
-
-.font-small {
-  font-size: 0.95em;
-}
-
-.line-spacing-large {
-  line-height: 1.8;
-}
-
-.word-spacing-large {
-  word-spacing: 0.2em;
-}
-
-.letter-spacing-large {
-  letter-spacing: 0.1em;
-}
-
-* {
-  pointer-events: auto;
-}
-
-a:hover,
-button:hover {
-  text-decoration: none;
-}/*# sourceMappingURL=accesability.css.map */
-/*# sourceMappingURL=common.css.map */
+}/*# sourceMappingURL=common.css.map */

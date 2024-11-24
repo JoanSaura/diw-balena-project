@@ -1,90 +1,73 @@
-@import 'variables';
-
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .data-section {
   display: flex;
   flex-direction: column;
-  gap: $padding-medium;
-  padding: $padding-small;
+  gap: 10px;
+  padding: 5px;
 }
 
 .post {
   display: flex;
-  background-color: $color-background;
-  padding: $padding-small;
-  border: 1px solid $color-gray;
-  border-radius: $border-radius-small;
+  background-color: #ccc;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .post-image {
   width: 340px;
-  height: 200px;
-  margin-right: $padding-small;
-  background-color: $color-light-gray;
-  border-radius: $border-radius-small;
+  height: 500px;
+  margin-right: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
 }
 
-.post-text {
-  p.username {
-    font-weight: bold;
-    margin-bottom: $padding-small;
-  }
+.post-text p.username {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .input-section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: $padding-small;
-  margin-top: $padding-xlarge;
-  padding: $padding-small;
-  background-color: $color-light-gray;
-  border: 1px solid $color-gray;
-  border-radius: $border-radius-small;
+  gap: 5px;
+  margin-top: 25px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 textarea {
   width: 90%;
-  padding: $padding-small;
-  border: 1px solid $color-gray;
-  border-radius: $border-radius-small;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   resize: vertical;
 }
 
-input[type="file"] {
-  padding: $padding-small;
-  border: 1px solid $color-gray;
-  border-radius: $border-radius-small;
-  background-color: $color-light-gray;
+input[type=file] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
 }
 
 button {
-  padding: $padding-small;
-  background-color: $color-button-bg;
-  color: $color-white;
+  padding: 5px;
+  background-color: #1a1a2e;
+  color: #ffffff;
   border: none;
-  border-radius: $border-radius-small;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-
-  &:hover {
-    background-color: $color-button-hover-bg;
-  }
 }
-
-.news-section {
-  background-color: $color-gray;
-  padding: $padding-xlarge;
-}
-
-.news-post {
-  border: 2px solid $color-black;
-  border-radius: $border-radius-medium;
-  padding: $padding-small;
-  margin: $padding-xlarge;
-
-  .news-title {
-    font-weight: bold;
-  }
-}
+button:hover {
+  background-color: #2e2e4e;
+}/*# sourceMappingURL=avdlb.css.map */

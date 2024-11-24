@@ -11,7 +11,7 @@
 
 .post {
   display: flex;
-  background-color: #fff8dc;
+  background-color: #ccc;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -20,7 +20,7 @@
 
 .post-image {
   width: 340px;
-  height: 200px;
+  height: 500px;
   margin-right: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -68,25 +68,7 @@ button {
   font-weight: bold;
   text-align: center;
 }
+
 button:hover {
   background-color: #2e2e4e;
-}
-
-.news-section {
-  background-color: #ccc;
-  padding: 25px;
-}
-
-.news-post {
-  border: 2px solid #000000;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 25px;
-}
-.news-post .news-title {
-  font-weight: bold;
-}
-
-#accesibility-menu {
-  background-color: #f0f0f0;
-}/*# sourceMappingURL=avdlb.css.map */
+} /*# sourceMappingURL=avdlb.css.map */
