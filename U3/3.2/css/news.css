@@ -3,9 +3,9 @@
     z-index: 1000;
     left: 50%;
     top: 50%;
-    width: 60%;
+    width: 65%;
     height: auto;
-    padding: 40px;
+    padding: 50px;
     background-color: white;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -9,7 +9,7 @@
 
 .post {
   display: flex;
-  background-color: $color-gray;
+  background-color: $color-background;
   padding: $padding-small;
   border: 1px solid $color-gray;
   border-radius: $border-radius-small;
@@ -18,7 +18,7 @@
 
 .post-image {
   width: 340px;
-  height: 500px;
+  height: 200px;
   margin-right: $padding-small;
   background-color: $color-light-gray;
   border-radius: $border-radius-small;
@@ -73,4 +73,7 @@ button {
   }
 }
 
-
+#accesibility-menu {
+  background-color: $color-light-gray;
+  
+}
