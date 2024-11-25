@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fullscreenContainer.innerHTML = `
         <span class="close-button">&times;</span>
         <div class="content-wrapper">
-          <img src="${imageSrc}" alt="Imatge de la noticia" class="news-image" />
+          <img src="${imageSrc}" alt="Imatge de la noticia" />
           <div class="news-content">
             <h1 class="news-title text-3xl">${post.querySelector('.news-title').textContent}</h1>
             <p class="username">${post.querySelector('.username').innerHTML}</p>

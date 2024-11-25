@@ -34,11 +34,17 @@
   .news-image {
     margin-right: 250px;
     height: 20%;
-    max-height: 50%;
+    max-height: 70%;
     object-fit: cover;
     border: 2px solid #000000;
   }
+  .content-hidden {
+    display: none;
+  }
   
+  .new-thumbnail{
+    max-width: 250px;
+  }
   body.no-scroll {
     overflow: hidden;
   }
