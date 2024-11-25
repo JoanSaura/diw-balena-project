@@ -125,6 +125,7 @@
     flex-wrap: wrap;
   }
   #lateral .link {
+    background-color: #00a8e8 ;
     margin: 15px;
     padding: 10px;
     font-size: 18px;

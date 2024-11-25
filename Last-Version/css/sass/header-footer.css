@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
@@ -9,8 +10,9 @@
 
 @media (max-width: 650px) {
   body {
-    background-color: #ffffff;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   }
   .logo-img-desk,
   #header > h1,
@@ -59,12 +61,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 3rem;
+    font-size: large;
   }
   textarea,
   .news-post,
   .post {
-    font-size: 3rem;
+    font-size: x-large;
+  }
+  #footer {
+    background-color: rgb(0, 21, 37);
+
   }
 }
 @media (min-width: 651px) {
@@ -91,7 +97,7 @@
   #main-content {
     width: 70%;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto;
     background-color: #ffffff;
   }
@@ -100,41 +106,42 @@
     height: 500px;
   }
   #lateral {
-    left: 0;
+    left: 0; 
     width: 200px;
     background-color: #f0f0f0;
     display: grid;
-    padding: 25px;
+    padding: 20px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-    border-radius: 0 30px 30px 0;
-    border: 2px solid #000000;
+    border-radius: 0 25px 25px 0;
+    border: 2px solid black;
     box-sizing: border-box;
     z-index: 1000;
+    transition: left 0.3s ease;
   }
   .content-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9921568627);
     margin-top: 20px;
     flex-wrap: wrap;
   }
   #lateral .link {
+    background-color: #00a8e8 ;
     margin: 15px;
     padding: 10px;
-    font-size: 3.5rem;
+    font-size: 18px;
     align-items: center;
     display: flex;
     justify-content: center;
-    border: 2px solid #000000;
+    border: 2px solid black;
     text-align: center;
   }
   #lateral .link a {
     text-decoration: none;
-    color: #000000;
     font-weight: bold;
   }
   #lateral .close {
@@ -149,11 +156,11 @@
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 50%;
-    border: 2px solid #000000;
+    border: 2px solid black;
     cursor: pointer;
   }
   #lateral .close i {
-    font-size: 20px;
+    font-size: font-size-large;
   }
   #login {
     background-color: #ffffff;
@@ -163,11 +170,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 #header > h1 {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-family: "Gowun Batang", sans-serif;
   text-align: center;
   font-weight: bold;
@@ -183,16 +190,16 @@ h2 {
 }
 
 #user-cont {
-  border: 4px solid #ffffff;
-  border-radius: 30px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 55px;
+  background-color: #aaa6ca;
   width: 55px;
   cursor: pointer;
 }
+
 #user-cont > .fa-user {
   color: #ffffff;
   font-size: 50px;
@@ -213,7 +220,7 @@ a {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 20px;
   margin: 15px;
 }
 
@@ -273,7 +280,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: white;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 10px;
@@ -282,24 +289,23 @@ p {
 
 .pic-author {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
-  color: #ffffff;
-  font-size: 3.5rem;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 5px 10px;
   z-index: 2;
 }
-
 #footer {
-  position: relative;
-  width: 100%;
-  height: 60px;
+  color: aliceblue;
+  height: 55px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: rgb(12, 12, 34);
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;  
 }
 
 #footer-links {
@@ -310,15 +316,15 @@ p {
 .author {
   color: aliceblue;
   text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #login {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
 #login .login-label {
@@ -327,16 +333,45 @@ p {
 
 #login > input {
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 #login > .sumbit-login {
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid #000000;
+  border-radius: 15px;
+  border: 2px solid black;
   background-color: #ffffff;
 }
 
 #footer .footer-icon {
-  margin-right: 5px;
-}/*# sourceMappingURL=header-footer.css.map */
+  margin-right: 10px;
+}
+
+.font-large {
+  font-size: 1.1em;
+}
+
+.font-small {
+  font-size: 1em;
+}
+
+.line-spacing-large {
+  line-height: 1.8;
+}
+
+.line-spacing-default {
+  line-height: 1.5;
+}
+
+.word-spacing-large {
+  word-spacing: 0.2em;
+}
+
+.letter-spacing-large {
+  letter-spacing: 0.1em;
+}
+
+* {
+  pointer-events: auto;
+}
+/*# sourceMappingURL=header-footer.css.map */

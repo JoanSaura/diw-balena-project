@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const fullscreenContainer = document.createElement('div');
       fullscreenContainer.classList.add('fullscreen-news');
 
-      const imageSrc = post.getAttribute('data-image');
+      const imageSrc = post.getAttribute('data-image') || 'ruta/default/image.jpg';
 
       fullscreenContainer.innerHTML = `
         <span class="close-button">&times;</span>
         <div class="content-wrapper">
-          <img src="${imageSrc}" alt="Imatge de la noticia" />
+          <img src="${imageSrc}" alt="Imatge de la noticia" class="news-image" />
           <div class="news-content">
             <h1 class="news-title text-3xl">${post.querySelector('.news-title').textContent}</h1>
             <p class="username">${post.querySelector('.username').innerHTML}</p>

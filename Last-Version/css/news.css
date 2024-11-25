@@ -3,9 +3,9 @@
     z-index: 1000;
     left: 50%;
     top: 50%;
-    width: 60%;
+    width: 70%;
     height: auto;
-    padding: 40px;
+    padding: 50px;
     background-color: white;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -34,17 +34,11 @@
   .news-image {
     margin-right: 250px;
     height: 20%;
-    max-height: 70%;
+    max-height: 50%;
     object-fit: cover;
     border: 2px solid #000000;
   }
-  .content-hidden {
-    display: none;
-  }
   
-  .new-thumbnail{
-    max-width: 250px;
-  }
   body.no-scroll {
     overflow: hidden;
   }

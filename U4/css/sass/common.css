@@ -1,4 +1,7 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
@@ -54,6 +57,7 @@
     cursor: pointer;
   }
   #center-container {
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,6 +86,9 @@
   .news-post,
   .post {
     font-size: x-large;
+  }
+  #footer {
+    background-color: rgb(0, 21, 37);
   }
 }
 @media (min-width: 651px) {
@@ -132,6 +139,11 @@
     z-index: 1000;
     transition: left 0.3s ease;
   }
+  
+  #lateral.hidden {
+    left: -200px;
+  }
+  
   .content-wrapper {
     display: flex;
     justify-content: center;
@@ -141,6 +153,7 @@
     flex-wrap: wrap;
   }
   #lateral .link {
+    background-color: #00a8e8 ;
     margin: 15px;
     padding: 10px;
     font-size: 18px;
@@ -311,7 +324,7 @@ p {
 }
 
 #footer {
-  background-color: rgb(9, 41, 67);
+  background-color: rgba(12, 12, 34, 1);
   position: relative;
   width: 100%;
   height: 60px;
@@ -360,12 +373,14 @@ p {
 }
 
 /* Accessibilidad */
+
+
 .font-large {
   font-size: 1.1em;
 }
 
 .font-small {
-  font-size: 1em;
+  font-size: 0.95em;
 }
 
 .line-spacing-large {
@@ -541,7 +556,45 @@ button:hover {
   background-color: #f0f0f0;
 }
 
+.font-large {
+  font-size: 1.1rem;
+}
+
+.font-small {
+  font-size: 0.95rem;
+}
+
+.line-spacing-large {
+  line-height: 1.8;
+}
+
+.line-spacing-default {
+  line-height: 1.5;
+}
+
+.word-spacing-large {
+  word-spacing: 0.2em;
+}
+
+.letter-spacing-large {
+  letter-spacing: 0.1em;
+}
+
+* {
+  pointer-events: auto;
+}
+
+a:hover,
+button:hover,
+.hoverable:hover {
+  color: inherit;
+  background: inherit;
+  text-decoration: none;
+  border-color: inherit;
+}
+
 #accessibility-menu {
+  position: fixed;
   top: 50%;
   right: -320px;
   transform: translateY(-50%);
@@ -557,12 +610,10 @@ button:hover {
   flex-direction: column;
   gap: 12px;
   max-width: 280px;
-  display: none;
 }
 
 #accessibility-menu.visible {
-  display: flex;
-  left: 1px;
+  right: 1px;
 }
 
 #accessibility-menu h3 {
@@ -596,6 +647,7 @@ button:hover {
 }
 
 #toggle-accessibility {
+  position: fixed;
   bottom: 20px;
   left: 20px;
   background-color: #00796b;
@@ -609,6 +661,8 @@ button:hover {
   transition: background-color 0.3s, transform 0.3s;
 }
 
+
+
 #toggle-accessibility:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
@@ -621,25 +675,6 @@ button:hover {
     bottom: auto;
     transform: translateY(-50%);
     border-radius: 8px;
-  }
-  #accessibility-menu {
-    display: flex;
-    left: 1px;
-  }
-}
-@media (max-width: 649px) {
-  #toggle-accessibility {
-    display: block;
-    top: auto;
-    bottom: 20px;
-    left: auto;
-    right: 20px;
-  }
-  #accessibility-menu {
-    display: none;
-  }
-  #accessibility-menu.visible {
-    display: flex;
   }
 }
 .grayscale {
@@ -667,7 +702,7 @@ button:hover {
 }
 
 .font-small {
-  font-size: 0.9em !important;
+  font-size: 0.95em !important;
 }
 
 .line-spacing-large {
@@ -688,4 +723,33 @@ button:hover {
 
 .low-contrast {
   filter: contrast(70%) brightness(130%);
-}/*# sourceMappingURL=common.css.map */
+}
+.font-large {
+  font-size: 1.1em;
+}
+
+.font-small {
+  font-size: 0.95em;
+}
+
+.line-spacing-large {
+  line-height: 1.8;
+}
+
+.word-spacing-large {
+  word-spacing: 0.2em;
+}
+
+.letter-spacing-large {
+  letter-spacing: 0.1em;
+}
+
+* {
+  pointer-events: auto;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=accesability.css.map */
+/*# sourceMappingURL=common.css.map */

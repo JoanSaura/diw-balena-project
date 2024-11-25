@@ -1,3 +1,4 @@
+/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
@@ -59,9 +60,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
   }
   textarea,
+  .news-post,
   .post {
     font-size: x-large;
   }
@@ -90,7 +92,7 @@
   #main-content {
     width: 70%;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: auto;
     background-color: #ffffff;
   }
@@ -103,13 +105,13 @@
     width: 200px;
     background-color: #f0f0f0;
     display: grid;
-    padding: 25px;
+    padding: 20px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-    border-radius: 0 30px 30px 0;
-    border: 2px solid #000000;
+    border-radius: 0 25px 25px 0;
+    border: 2px solid black;
     box-sizing: border-box;
     z-index: 1000;
   }
@@ -117,7 +119,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9921568627);
     margin-top: 20px;
     flex-wrap: wrap;
   }
@@ -128,12 +130,12 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    border: 2px solid #000000;
+    border: 2px solid black;
     text-align: center;
   }
   #lateral .link a {
     text-decoration: none;
-    color: #000000;
+    color: black;
     font-weight: bold;
   }
   #lateral .close {
@@ -148,7 +150,7 @@
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 50%;
-    border: 2px solid #000000;
+    border: 2px solid black;
     cursor: pointer;
   }
   #lateral .close i {
@@ -162,11 +164,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 #header > h1 {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-family: "Gowun Batang", sans-serif;
   text-align: center;
   font-weight: bold;
@@ -272,7 +274,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: white;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 10px;
@@ -281,9 +283,9 @@ p {
 
 .pic-author {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
-  color: #ffffff;
+  bottom: 10px;
+  left: 10px;
+  color: white;
   font-size: 18px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -309,15 +311,15 @@ p {
 .author {
   color: aliceblue;
   text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #login {
   width: 40%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
 }
 
 #login .login-label {
@@ -326,16 +328,16 @@ p {
 
 #login > input {
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 #login > .sumbit-login {
   cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid #000000;
+  border-radius: 15px;
+  border: 2px solid black;
   background-color: #ffffff;
 }
 
 #footer .footer-icon {
-  margin-right: 5px;
+  margin-right: 10px;
 }/*# sourceMappingURL=header-footer.css.map */
