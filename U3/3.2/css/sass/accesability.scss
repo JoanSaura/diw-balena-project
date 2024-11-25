@@ -1,109 +1,88 @@
+
+@import 'variables';
+
 #accessibility-menu {
+  position: fixed;
   top: 50%;
   right: -320px;
   transform: translateY(-50%);
-  background-color: #f9f9f9;
-  font-size: 16px;
-  border: 1px solid #d1d1d1;
-  border-radius: 0 12px 12px 0;
-  padding: 20px;
-  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: $default-background;
+  font-size: $font-size-medium;
+  border: 1px solid $color-gray;
+  border-radius: 0 $border-radius-medium $border-radius-medium 0;
+  padding: $padding-medium $padding-large;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba($color-black, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: $margin-medium;
   max-width: 280px;
-  display: none;
-}
 
-#accessibility-menu.visible {
-  display: flex;
-  left: 1px;
-}
+  &.visible {
+    right: 1px;
+  }
 
-#accessibility-menu h3 {
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 4px;
-}
+  h3 {
+    margin-bottom: $margin-medium;
+    color: $default-text;
+    font-size: $font-size-large;
+    border-bottom: 2px solid $color-light-gray;
+    padding-bottom: $padding-small;
+  }
 
-#accessibility-menu button {
-  background-color: #ffffff;
-  color: #333333;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px 16px;
-  font-size: 0.95em;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-}
+  button {
+    background-color: $color-white;
+    color: $default-text;
+    border: 1px solid $color-gray;
+    border-radius: $border-radius-small;
+    padding: $padding-small $padding-medium;
+    font-size: $font-size-small;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 
-#accessibility-menu button:hover {
-  background-color: #e0f7fa;
-  color: #00796b;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+    &:hover {
+      background-color: $bg-high-saturation;
+      color: $text-high-saturation;
+      box-shadow: 0 2px 6px rgba($color-black, 0.1);
+    }
 
-#accessibility-menu button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($color-accent, 0.4);
+    }
+  }
 }
 
 #toggle-accessibility {
-  bottom: 20px;
-  left: 20px;
-  background-color: #00796b;
-  color: #ffffff;
+  position: fixed;
+  bottom: $margin-xlarge;
+  left: $margin-xlarge;
+  background-color: $color-accent;
+  color: $color-white;
   border: none;
   border-radius: 50%;
-  padding: 14px;
-  font-size: 1.5rem;
+  padding: $padding-large;
+  font-size: $font-size-xlarge;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba($color-black, 0.3);
   transition: background-color 0.3s, transform 0.3s;
-}
 
-#toggle-accessibility:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
-}
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.4);
+  }
 
-@media (min-width: 650px) {
-  #toggle-accessibility {
+  @media (min-width: 650px) {
     top: 50%;
     left: -50px;
     bottom: auto;
     transform: translateY(-50%);
-    border-radius: 8px;
-  }
-
-  #accessibility-menu {
-    display: flex;
-    left: 1px;
+    border-radius: $border-radius-medium;
   }
 }
 
-@media (max-width: 649px) {
-  #toggle-accessibility {
-    display: block;
-    top: auto;
-    bottom: 20px;
-    left: auto;
-    right: 20px;
-  }
-
-  #accessibility-menu {
-    display: none;
-  }
-
-  #accessibility-menu.visible {
-    display: flex;
-  }
-}
-
+// Accessibility Classes
 .grayscale {
   filter: grayscale(100%);
 }
@@ -125,15 +104,15 @@
 }
 
 .font-large {
-  font-size: 1.1em !important; 
+  font-size: $font-size-large !important;
 }
 
 .font-small {
-  font-size: 0.9em !important; 
+  font-size: $font-size-small !important;
 }
 
 .line-spacing-large {
-  line-height: 1.75 !important; 
+  line-height: 1.75 !important;
 }
 
 .word-spacing-large {
@@ -141,7 +120,7 @@
 }
 
 .letter-spacing-large {
-  letter-spacing: 0.1em !important; 
+  letter-spacing: 0.1em !important;
 }
 
 .high-contrast {
@@ -150,4 +129,14 @@
 
 .low-contrast {
   filter: contrast(70%) brightness(130%);
+}
+
+// Universal Styles
+* {
+  pointer-events: auto;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
 }
