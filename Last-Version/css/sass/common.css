@@ -105,7 +105,7 @@
     width: 200px;
     background-color: #f0f0f0;
     display: grid;
-    padding: 20px;
+    padding: 25px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -141,6 +141,7 @@
     text-align: center;
   }
   #lateral .link a {
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
   }
@@ -707,5 +708,6 @@ button:hover,
 a:hover,
 button:hover {
   text-decoration: none;
-}/*# sourceMappingURL=accesability.css.map */
+}
+/*# sourceMappingURL=accesability.css.map */
 /*# sourceMappingURL=common.css.map */
