@@ -74,15 +74,14 @@
 
       <form action="" id="login">
         <h2>Iniciar sessió</h2>
-        <label for="email" class="login-label">Correu electrònic </label>
-        <input id="email" name="email" type="text" placeholder="Correu electrònic" />
+        <label for="email" class="login-label">Correu electrònic</label>
+        <input id="email" name="email" type="text" placeholder="Correu electrònic" required />
         <label for="password" class="login-label">Contrasenya</label>
-        <input id="password" name="password" type="password" placeholder="Contrasenya" />
-        <a href="" id="forgot-password">He oblidat la meva contrasenya</a>
-        <button class="submit" type="submit" aria-label="Inicia sessió">
-          Inicia sessió
-        </button>
+        <input id="password" name="password" type="password" placeholder="Contrasenya" required />
+        <a href="#" id="forgot-password">He oblidat la meva contrasenya</a>
+        <button class="submit" type="submit" aria-label="Inicia sessió">Inicia sessió</button>
       </form>
+      
 
       <section id="accessibility-menu">
         <button id="toggle-accessibility" aria-label="Ajustes de accesibilidad">
