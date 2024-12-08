@@ -14,6 +14,8 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/7f53f0147c.js"
       crossorigin="anonymous"
@@ -71,16 +73,22 @@
         </div>
         <div class="link"><a href="../html/news.html">Notícies</a></div>
       </aside>
-
       <form action="" id="login">
         <h2>Iniciar sessió</h2>
+        
         <label for="email" class="login-label">Correu electrònic</label>
         <input id="email" name="email" type="text" placeholder="Correu electrònic" required />
+        
         <label for="password" class="login-label">Contrasenya</label>
         <input id="password" name="password" type="password" placeholder="Contrasenya" required />
+        
         <a href="#" id="forgot-password">He oblidat la meva contrasenya</a>
+        
         <button class="submit" type="submit" aria-label="Inicia sessió">Inicia sessió</button>
+        
+        <p id="login-message" style="color: red; display: none;"></p>
       </form>
+      
       
 
       <section id="accessibility-menu">
