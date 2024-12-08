@@ -48,7 +48,7 @@ $(document).ready(() => {
           "Necessites canviar la teva contrasenya en el primer inici de sessió."
         );
       }
-      window.location.href = "../index.html";
+      window.location.href = "../html/admin_page.html";
     } else {
       alert("Contrasenya incorrecta. Si us plau, torna-ho a intentar.");
     }
