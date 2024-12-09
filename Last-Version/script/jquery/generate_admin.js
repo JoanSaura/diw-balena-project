@@ -3,10 +3,10 @@ $(document).ready(function () {
     const buttonsHtml = `
       <div class="button-container">
         <h1>Pàgina d'administrador</h1>
-        <a href="/html/admin/create_users.html">
+        <a href="../html/admin/create_users.html">
           <button id="create-user-btn" class="button-link">Creació d'Usuaris</button>
         </a>
-        <a href="/html/admin/edit_users.html">
+        <a href="../html/admin/edit_users.html">
           <button id="edit-user-btn" class="button-link">Edició d'Usuaris</button>
         </a>
       </div>
