@@ -5,9 +5,6 @@ $(document).ready(() => {
   if (!currentUser) {
     window.location.href = "../html/login.html";
   } else {
-    if (currentUser.is_first_login) {
-      window.location.href = "../html/change_password.html";
-    }
     loginName.innerText = currentUser.name;  
   }
 });
