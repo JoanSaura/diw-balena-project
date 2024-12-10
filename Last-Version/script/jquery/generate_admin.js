@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  console.log(currentUser);
   const createButtons = () => {
     const buttonsHtml = `
       <div class="button-container">

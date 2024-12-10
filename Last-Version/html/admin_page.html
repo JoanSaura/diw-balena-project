@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+    ></script>
     <script src="../script/script.js"></script>
+    <script src="../script/check_login.js"></script>
     <link rel="stylesheet" href="../css/olds/transitions.css" />
     <link rel="stylesheet" href="../css/olds/shadows.css" />
     <link rel="stylesheet" href="../css/olds/gradients.css" />
@@ -25,9 +31,9 @@
 
   <body>
     <header id="header">
-      <a href="./index.html">
+      <a href="../index.html">
         <img
-          src="./img/Extendend Logo inverted.png"
+          src="../img/Extendend Logo inverted.png"
           alt="Logo Móvil"
           class="logo-img-mob"
         />
@@ -41,8 +47,8 @@
       </a>
       <h1>El blau de la balena</h1>
       <div class="login-apart">
-        <p class="username">Admin</p>
-        <a href="./html/login.html" id="user-link" >
+        <p id="username"></p>
+        <a href="/html/admin_page.html" id="user-link" >
           <div id="user-cont" class="d">
             <i class="fa-regular fa-user"></i>
           </div>

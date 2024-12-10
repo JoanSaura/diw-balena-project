@@ -8,7 +8,7 @@ $(document).ready(() => {
     edit_news: true,
     edit_bone_files: true,
     active: true,
-    is_first_login: true,
+    is_first_login: true,  // Establece el valor como `true` inicialmente.
   };
 
   const initializeDefaultUser = () => {
@@ -21,10 +21,9 @@ $(document).ready(() => {
       storedUsers.push(DEFAULT_USER);
       localStorage.setItem("users", JSON.stringify(storedUsers));
       console.log("Usuari predeterminat creat");
-    } else {
-      console.log(DEFAULT_USER);
     }
   };
+
   initializeDefaultUser();
 
   $("#login").on("submit", (e) => {
@@ -43,18 +42,15 @@ $(document).ready(() => {
     if (password === user.password) {
       alert(`Benvingut/da, ${user.name}! Has iniciat sessió correctament.`);
       localStorage.setItem("currentUser", JSON.stringify(user));
+
       if (user.is_first_login) {
-        alert(
-          "Necessites canviar la teva contrasenya en el primer inici de sessió."
-        );
+        alert("Necessites canviar la teva contrasenya en el primer inici de sessió.");
+        window.location.href = "../html/change_password.html";
+      } else {
+        window.location.href = "../html/admin_page.html";
       }
-      window.location.href = "../html/change_password.html";
     } else {
       alert("Contrasenya incorrecta. Si us plau, torna-ho a intentar.");
     }
-  });
-
-  $(window).on("beforeunload", () => {
-    initializeDefaultUser();
   });
 });

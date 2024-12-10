@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  console.log(currentUser);
   const formHtml = `
     <h2>Formulari de Creació d'Usuari</h2>
     <form id="user-form">

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  console.log(currentUser);
   const $form = $(`
     <form id="edit-user-form">
       <h2>Editar Usuari</h2>
