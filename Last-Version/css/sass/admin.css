@@ -96,3 +96,11 @@
     background: #0056b3;
     transform: scale(1.03);
   }
+
+  .link_user {
+    text-decoration: none;
+    color: #ccc;
+  }
+  .link_user:visited {
+    color: #ccc;
+  }
