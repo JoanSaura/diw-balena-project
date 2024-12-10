@@ -1,2 +1,6 @@
 -Rehazer Fichas
 -Retocar estilos
+
+Login
+    - Quitar boton Login
+    - Retocar enlaces en base de usuarios
