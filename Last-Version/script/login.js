@@ -4,11 +4,12 @@ $(document).ready(() => {
     name: "admin",
     email: "desenvolupador@iesjoanramis.org",
     password: "Ramis.20",
+    admin: true,
     edit_users: true,
     edit_news: true,
     edit_bone_files: true,
     active: true,
-    is_first_login: true,  // Establece el valor como `true` inicialmente.
+    is_first_login: true,  
   };
 
   const initializeDefaultUser = () => {
