@@ -2,5 +2,8 @@
 -Retocar estilos
 
 Login
+    - Encriptar contraseña
+    - Validacion formulario Login
+    - Tabla de usuarios
     - Quitar boton Login
     - Retocar enlaces en base de usuarios
