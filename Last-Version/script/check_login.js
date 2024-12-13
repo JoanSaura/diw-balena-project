@@ -13,12 +13,11 @@ $(document).ready(() => {
     userCont.style.display = "none";
     loginName.style.display = "block";
 
-    // Crear la opción "Admin Page" solo si el usuario es administrador
     if (currentUser.is_admin === true) {
       const adminPageOption = document.createElement("li");
       const adminLink = document.createElement("a");
-      adminLink.href = "../html/admin_page.html"; // Ruta a la página de administración
-      adminLink.innerText = "Admin Page"; // Nombre de la opción
+      adminLink.href = "/html/admin_page.html";
+      adminLink.innerText = "Admin Page"; 
       adminPageOption.appendChild(adminLink);
       menuList.appendChild(adminPageOption);
     }

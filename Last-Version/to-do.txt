@@ -3,5 +3,5 @@
 
 Login
     - Encriptar contraseña
-    - Tabla de usuarios
+    - Retocar enlaces
     - Retocar enlaces en base de usuarios
