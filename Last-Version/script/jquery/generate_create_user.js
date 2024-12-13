@@ -23,6 +23,11 @@ $(document).ready(function () {
         <input type="checkbox" id="create-bone-files" />
         <label for="create-bone-files">Crear fitxes d'os</label>
       </div>
+      <!-- Campo de admin -->
+      <div>
+        <input type="checkbox" id="is-admin" />
+        <label for="is-admin">Usuari Administrador</label>
+      </div>
       <button type="submit" id="submit-user">Crear Usuari</button>
     </form>
     <p id="error-message" style="color: red; display: none;"></p>
@@ -32,48 +37,54 @@ $(document).ready(function () {
   $('#main-content').html(formHtml);
 
   $('#user-form').on('submit', function (e) {
-      e.preventDefault();
+    e.preventDefault();
 
-      const name = $('#name').val();
-      const email = $('#email').val();
-      const password = $('#password').val();
-      const createRecords = $('#create-records').is(':checked');
-      const createNews = $('#create-news').is(':checked');
-      const createBoneFiles = $('#create-bone-files').is(':checked');
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const password = $('#password').val();
+    const createRecords = $('#create-records').is(':checked');
+    const createNews = $('#create-news').is(':checked');
+    const createBoneFiles = $('#create-bone-files').is(':checked');
+    const isAdmin = $('#is-admin').is(':checked');  // Obtener si el usuario es administrador
 
-      let errorMessage = '';
-      if (!name) {
-          errorMessage = 'El nom no pot estar buit.';
-      } else if (!email) {
-          errorMessage = 'El correu electrònic no pot estar buit.';
-      } else if (!password) {
-          errorMessage = 'La contrasenya no pot estar buida.';
-      }
+    let errorMessage = '';
+    if (!name) {
+      errorMessage = 'El nom no pot estar buit.';
+    } else if (!email) {
+      errorMessage = 'El correu electrònic no pot estar buit.';
+    } else if (!password) {
+      errorMessage = 'La contrasenya no pot estar buida.';
+    }
 
-      if (errorMessage) {
-          $('#error-message').text(errorMessage).show();
-          return;
-      }
+    if (errorMessage) {
+      $('#error-message').text(errorMessage).show();
+      return;
+    }
 
-      const newUser = {
-          id: Date.now(),
-          name: name,
-          email: email,
-          password: password,
-          edit_users: createRecords,
-          edit_news: createNews,
-          edit_bone_files: createBoneFiles,
-          active: true,
-          is_first_login: true
-      };
+    // Crear el objeto para el nuevo usuario, incluyendo la propiedad is_admin
+    const newUser = {
+      id: Date.now(),
+      name: name,
+      email: email,
+      password: password,
+      edit_users: createRecords,
+      edit_news: createNews,
+      edit_bone_files: createBoneFiles,
+      is_admin: isAdmin, // Asignar is_admin según el checkbox
+      active: true,
+      is_first_login: true
+    };
 
-      const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-      storedUsers.push(newUser);
-      localStorage.setItem('users', JSON.stringify(storedUsers));
+    // Guardar el nuevo usuario en el localStorage
+    const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    storedUsers.push(newUser);
+    localStorage.setItem('users', JSON.stringify(storedUsers));
 
-      $('#success-message').text('Usuari creat correctament!').show();
-      $('#error-message').hide();
+    // Mostrar mensaje de éxito y ocultar el mensaje de error
+    $('#success-message').text('Usuari creat correctament!').show();
+    $('#error-message').hide();
 
-      $('#user-form')[0].reset();
+    // Resetear el formulario
+    $('#user-form')[0].reset();
   });
 });
