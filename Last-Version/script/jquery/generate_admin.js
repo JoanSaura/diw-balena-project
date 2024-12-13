@@ -1,5 +1,11 @@
 $(document).ready(function () {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!currentUser || currentUser.is_admin !== true) {
+    window.location.href = "../index.html"; 
+    return;
+  }
+
   const createButtons = () => {
     const buttonsHtml = `
       <div class="button-container">
