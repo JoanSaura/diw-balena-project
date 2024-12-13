@@ -45,7 +45,7 @@ $(document).ready(function () {
     const createRecords = $('#create-records').is(':checked');
     const createNews = $('#create-news').is(':checked');
     const createBoneFiles = $('#create-bone-files').is(':checked');
-    const isAdmin = $('#is-admin').is(':checked');  // Obtener si el usuario es administrador
+    const isAdmin = $('#is-admin').is(':checked');  
 
     let errorMessage = '';
     if (!name) {
@@ -61,7 +61,6 @@ $(document).ready(function () {
       return;
     }
 
-    // Crear el objeto para el nuevo usuario, incluyendo la propiedad is_admin
     const newUser = {
       id: Date.now(),
       name: name,
@@ -70,21 +69,18 @@ $(document).ready(function () {
       edit_users: createRecords,
       edit_news: createNews,
       edit_bone_files: createBoneFiles,
-      is_admin: isAdmin, // Asignar is_admin según el checkbox
+      is_admin: isAdmin, 
       active: true,
       is_first_login: true
     };
 
-    // Guardar el nuevo usuario en el localStorage
     const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
     storedUsers.push(newUser);
     localStorage.setItem('users', JSON.stringify(storedUsers));
 
-    // Mostrar mensaje de éxito y ocultar el mensaje de error
     $('#success-message').text('Usuari creat correctament!').show();
     $('#error-message').hide();
 
-    // Resetear el formulario
     $('#user-form')[0].reset();
   });
 });

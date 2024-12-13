@@ -63,23 +63,20 @@ $(document).ready(() => {
     if (password === user.password) {
       // Mostrar missatge d'èxit
       loginMessage.text(`Benvingut/da, ${user.name}! Has iniciat sessió correctament.`);
-      loginMessage.css("color", "green"); // Canviar color a verd per èxit
-      loginMessage.show(); // Mostrar missatge
+      loginMessage.css("color", "green"); 
+      loginMessage.show(); 
 
       localStorage.setItem("currentUser", JSON.stringify(user));
 
-      // Si és el primer inici de sessió, redirigim a canviar la contrasenya
       if (user.is_first_login) {
         window.location.href = "../html/change_password.html";
       } else {
-        // Si no és el primer inici, redirigim a la pàgina principal
         window.location.href = "../html/admin_page.html";
       }
     } else {
-      // Mostrar missatge d'error si la contrasenya és incorrecta
       loginMessage.text("Contrasenya incorrecta. Si us plau, prova de nou.");
-      loginMessage.css("color", "red"); // Canviar color a vermell per error
-      loginMessage.show(); // Mostrar missatge
+      loginMessage.css("color", "red"); 
+      loginMessage.show(); 
     }
   });
 });
