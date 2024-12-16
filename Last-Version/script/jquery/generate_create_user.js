@@ -19,10 +19,6 @@ $(document).ready(function () {
         <input type="checkbox" id="create-news" />
         <label for="create-news">Crear notícies</label>
       </div>
-      <div>
-        <input type="checkbox" id="create-bone-files" />
-        <label for="create-bone-files">Crear fitxes d'os</label>
-      </div>
       <!-- Campo de admin -->
       <div>
         <input type="checkbox" id="is-admin" />
@@ -33,7 +29,7 @@ $(document).ready(function () {
     <p id="error-message" style="color: red; display: none;"></p>
     <p id="success-message" style="color: green; display: none;"></p>
   `;
-  
+
   $('#main-content').html(formHtml);
 
   $('#user-form').on('submit', function (e) {
@@ -44,7 +40,6 @@ $(document).ready(function () {
     const password = $('#password').val();
     const createRecords = $('#create-records').is(':checked');
     const createNews = $('#create-news').is(':checked');
-    const createBoneFiles = $('#create-bone-files').is(':checked');
     const isAdmin = $('#is-admin').is(':checked');  
 
     let errorMessage = '';
@@ -66,10 +61,9 @@ $(document).ready(function () {
       name: name,
       email: email,
       password: password,
-      edit_users: createRecords,
       edit_news: createNews,
-      edit_bone_files: createBoneFiles,
-      is_admin: isAdmin, 
+      edit_bone_files: createRecords, 
+      is_admin: isAdmin,
       active: true,
       is_first_login: true
     };
