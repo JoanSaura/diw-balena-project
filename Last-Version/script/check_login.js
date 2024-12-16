@@ -16,7 +16,9 @@ $(document).ready(() => {
     if (currentUser.is_admin === true) {
       const adminPageOption = document.createElement("li");
       const adminLink = document.createElement("a");
-      adminLink.href = "../html/admin_page.html";
+      const currentPath = window.location.pathname;
+      const basePath = currentPath.includes("/html/") ? "./admin_page.html" : "./html/admin_page.html";
+      adminLink.href = basePath;
       adminLink.innerText = "Admin Page"; 
       adminPageOption.appendChild(adminLink);
       menuList.appendChild(adminPageOption);
