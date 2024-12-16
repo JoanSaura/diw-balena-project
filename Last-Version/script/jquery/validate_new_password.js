@@ -5,7 +5,8 @@ $(document).ready(function () {
       window.location.href = 'login.html';
     }
   
-    console.log(currentUser);
+    console.log("Per a l'usuari admin jo empreare '*Ramis2024/25*' com a contrasenya");
+    
   
     $('#login').on('submit', function (e) {
       e.preventDefault();

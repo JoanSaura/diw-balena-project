@@ -23,6 +23,13 @@ $(document).ready(function () {
       </div>
       <button type="button" id="edit-user-btn">Editar</button>
       <p id="error-message" style="color: red; display: none;"></p>
+      <ul id="password-requirements">
+        <li>La contrasenya ha de tenir almenys 12 caràcters.</li>
+        <li>Ha de contenir almenys una lletra majúscula.</li>
+        <li>Ha de contenir almenys una lletra minúscula.</li>
+        <li>Ha de contenir almenys un número.</li>
+        <li>Ha de contenir almenys un caràcter especial (!@#$%^&*).</li>
+      </ul>
     </form>
   `);
 

@@ -16,9 +16,8 @@ $(document).ready(() => {
     if (currentUser.is_admin === true) {
       const adminPageOption = document.createElement("li");
       const adminLink = document.createElement("a");
-      const basePath = currentPath.includes("/html/") ? "./admin_page.html" : "./html/admin_page.html";
-      adminLink.href = basePath;
-      adminLink.innerText = "Admin Page";       adminLink.innerText = "Admin Page"; 
+      adminLink.href = "../html/admin_page.html";
+      adminLink.innerText = "Admin Page"; 
       adminPageOption.appendChild(adminLink);
       menuList.appendChild(adminPageOption);
     }
@@ -30,7 +29,7 @@ $(document).ready(() => {
     logoutLink.innerText = "Logout";
     logoutLink.addEventListener("click", () => {
       localStorage.removeItem("currentUser");
-      window.location.href = "../index.html"; // Redirigir a la página de inicio
+      window.location.reload();  // Recarga la página
     });
     logoutOption.appendChild(logoutLink);
     menuList.appendChild(logoutOption);
