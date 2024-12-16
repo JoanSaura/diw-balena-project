@@ -3,7 +3,6 @@
 
 Login
     - Encriptar contraseña
-    - Retocar enlaces en base de usuarios
     - Parametros de contraseña  
         - Nueva Contraseña first time
         - Creacion de usuario
