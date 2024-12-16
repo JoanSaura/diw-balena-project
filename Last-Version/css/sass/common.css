@@ -709,10 +709,13 @@ a:hover,
 button:hover {
   text-decoration: none;
 }
+#username {
+  font-size: x-large;
+  color: white;
+}
 #password-requirements {
   font-size: 1.2em; 
   color: #555; 
-  margin: 1%;
   margin-top: 10px;
   list-style: none;  
 }
