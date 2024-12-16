@@ -11,6 +11,7 @@ $(document).ready(() => {
     active: true,
     is_first_login: true,
   };
+
   // Inicialitza l'usuari per defecte en l'emmagatzematge local si no existeix
   const initializeDefaultUser = () => {
     console.log(DEFAULT_USER);
